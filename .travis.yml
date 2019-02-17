@@ -9,6 +9,9 @@ install:
   - pip install flask
   - pip install requests
   - pip install unittest2
+  - pip install --user codecov
 # Run the unit test
 script:
   - python test.py
+after_success:
+  - codecov
