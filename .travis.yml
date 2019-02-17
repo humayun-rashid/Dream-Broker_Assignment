@@ -11,4 +11,4 @@ install:
   - pip install unittest2
 # Run the unit test
 script:
-  - python test_(heroku).py
+  - python test_heroku.py
