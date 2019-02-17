@@ -12,6 +12,5 @@ install:
   - pip install codecov
 # Run the unit test
 script:
-  - python test.py
-after_success:
-  - codecov -t 5a16b927-6d41-41fb-834a-1301efac5346
+  - python test.py --cov=codecov
+
