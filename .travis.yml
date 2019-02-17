@@ -14,4 +14,4 @@ install:
 script:
   - python test.py
 after_success:
-  - codecov
+  - codecov -t 5a16b927-6d41-41fb-834a-1301efac5346
