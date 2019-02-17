@@ -15,7 +15,7 @@ class DbAppTest(unittest.TestCase):
         test_data = {"text":"This TEXT contain CAPITAL, small   AlPhaBEts with Numerics 1, 2, 3 and Special characters ! ! !* * * for Testin purposes"}
 
         #Request for POST operation from server
-        test_case = requests.post('http://127.0.0.1:5000/analyze',headers={'Content-Type': 'application/json'}, data=json.dumps(test_data))
+        test_case = requests.post('https://dream-broker-assignment.herokuapp.com/analyze',headers={'Content-Type': 'application/json'}, data=json.dumps(test_data))
 
         #Get header information
         header_dict = test_case.headers
