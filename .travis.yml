@@ -15,4 +15,4 @@ install:
  
 # Run the unit test
 script:
-  - python test.py
+  - python test_(heroku).py
