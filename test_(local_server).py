@@ -14,8 +14,11 @@ class DbAppTest(unittest.TestCase):
         #A test data to check the different functions and method 
         test_data = {"text":"This TEXT contain CAPITAL, small   AlPhaBEts with Numerics 1, 2, 3 and Special characters ! ! !* * * for Testin purposes"}
 
+        #server url for local Host
+        server_url='http://127.0.0.1:5000/analyze'
+
         #Request for POST operation from server
-        test_case = requests.post('http://127.0.0.1:5000/analyze',headers={'Content-Type': 'application/json'}, data=json.dumps(test_data))
+        test_case = requests.post(server_url,headers={'Content-Type': 'application/json'}, data=json.dumps(test_data))
 
         #Get header information
         header_dict = test_case.headers
