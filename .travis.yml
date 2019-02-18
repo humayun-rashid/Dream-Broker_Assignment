@@ -10,7 +10,9 @@ install:
   - pip install requests
   - pip install unittest2
   - pip install codecov
+  - pip instalpytest-cov
 # Run the unit test
 script:
-  - python test.py --cov=codecov
-
+  - py.test test.py --cov=codecov
+after_success:
+  - codecov
