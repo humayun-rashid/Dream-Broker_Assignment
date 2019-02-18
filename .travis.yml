@@ -1,18 +1,18 @@
 # Disable sudo to speed up the build
 sudo: false
+
 # Set the build language to Python
 language: python
-# Set the python version to 2.7
+
+# Set the python version to3.6
 python: 3.6
+
 # Install the codecov pip dependency
 install:
   - pip install flask
   - pip install requests
   - pip install unittest2
-  - pip install codecov
-  - pip install pytest-cov
+  
 # Run the unit test
 script:
-  - py.test test.py --cov=codecov
-after_success:
-  - codecov
+  - python test.py
